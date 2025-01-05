@@ -3,6 +3,18 @@
 .header {
     background: v.$verde;
 
+    @include m.tablet {
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: .1rem .2rem .3rem #333;
+        }
+    }
+    
+
  
     .contenido-header {  
         padding: 2rem;
@@ -38,7 +50,7 @@
     a {
         color: v.$blanco;
 
-        &:hover {
+        &:hover, &.activo {
             color: v.$amarillo;
         }
     }

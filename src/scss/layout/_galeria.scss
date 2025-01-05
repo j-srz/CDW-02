@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+
+    @include m.contenedor;
+    &-imagenes {
+        @include m.resetear-lista;
+        @include m.grid(1);
+
+        @include m.telefono {
+            @include m.grid(2);
+        }
+
+        @include m.tablet {
+            @include m.grid(3);
+        }
+        @include m.desktop {
+            @include m.grid(4);
+        }
+
+        img {
+            height: 20rem;
+            object-fit: cover;
+        }
+
+    }
+}
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: grid;
+    place-items: center;
+
+    animation: fadeIn ease-in 0.5s;
+
+    &.fade-out {
+        animation: fadeOut ease-in 0.5s;
+    }
+
+    img {
+        max-width: 100rem;
+        max-height: 100rem;
+
+    }
+}
+
+.btn-cerrar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: v.$blanco;
+    color: v.$negro;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
