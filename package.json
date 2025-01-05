@@ -1,0 +1,27 @@
+{
+  "name": "cdw-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:dist/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-srz/CDW-02.git"
+  },
+  "author": "Jesus Suarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-srz/CDW-02/issues"
+  },
+  "homepage": "https://github.com/j-srz/CDW-02#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.83.1"
+  }
+}
